@@ -14,4 +14,5 @@
 # limitations under the License.
 #
 
-add_lunch_combo odroidxu3-eng
+add_lunch_combo aosp_odroidxu3-eng
+add_lunch_combo aosp_odroidxu3-userdebug
