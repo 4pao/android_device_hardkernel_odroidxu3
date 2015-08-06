@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2011 The Android Open-Source Project
+# Copyright (C) 2011 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,6 +11,16 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
 #
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/full_odroidxu3.mk \
-	$(LOCAL_DIR)/aosp_odroidxu3.mk
+# This file is the build configuration for a full Android
+# build for odroidxu3 hardware. This cleanly combines a set of
+# device-specific aspects (drivers) with a device-agnostic
+# product configuration (apps). Except for a few implementation
+# details, it only fundamentally contains two inherit-product
+# lines, full and odroidxu3, hence its name.
+#
+
+$(call inherit-product, device/hardkernel/odroidxu3/full_odroidxu3.mk)
+
+PRODUCT_NAME := aosp_odroidxu3
